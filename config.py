@@ -8,7 +8,7 @@ COIN = 'SUI'
 
 MIN_PRICE: float = 0
 list_time = datetime(year=2022, month=5, day=3, hour=15, minute=0, second=0)
-COEFFICIENT = 1
+
 """ time.is - website to watch time
 If they lag behind - (how far behind) 
 If they're in a hurry (how much hurry) """
