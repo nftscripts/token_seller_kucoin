@@ -12,6 +12,7 @@ from config import (
     MIN_PRICE,
     list_time,
     COIN,
+    COEFFICIENT,
 )
 
 from asyncio import (
@@ -74,7 +75,7 @@ class CoinSeller:
                 await async_sleep(0.5)
                 continue
 
-            price = float(response['bestBid'])
+            price = (round(float(response['bestBid']) * COEFFICIENT, 3))
             if MIN_PRICE > price:
                 logger.info('Not the right price for you..')
                 await async_sleep(0.5)
