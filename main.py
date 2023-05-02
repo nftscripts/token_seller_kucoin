@@ -16,7 +16,7 @@ def main() -> None:
     for account in accounts_data:
         coin_seller = CoinSeller(account['name'], account['api_key'], account['api_secret'], account['api_passphrase'],
                                  account['proxy'])
-        process = Process(target=coin_seller.run())
+        process = Process(target=coin_seller.run)
         process.start()
 
 
